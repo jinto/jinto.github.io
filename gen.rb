@@ -1,5 +1,5 @@
 # create files in `_posts` from wordpress export file
-# category, tag, images, video, embed, comments, trackback
+# tag, images, video, embed, comments, trackback
 # redirector for "idx: #{idx}"
 require 'nokogiri'
 require 'date'
@@ -17,7 +17,7 @@ end
 
 def write(f, str)
 
-    puts str
+    #puts str
     f.write str + "\n"
 end
 
@@ -28,6 +28,16 @@ xml.xpath("//wp:cat_name").each do |category|
         write f, "layout: category"
         write f, "title: #{name}"
         write f, "category: #{name.slug!}"
+        write f, "---"
+    }
+end
+xml.xpath("//wp:tag_name").each do |tag|
+    name = tag.inner_text
+    File.open("tag/"+name.slug!+".md", 'w') { |f| 
+        write f, "---"
+        write f, "layout: tag"
+        write f, "title: #{name}"
+        write f, "tag: #{name.slug!}"
         write f, "---"
     }
 end
@@ -45,13 +55,134 @@ xml.xpath("//channel/item").each do |post|
         tags = []
         post.xpath("category").each { |category|
             text = category.inner_text
-            p text
             if category.attribute('domain').value == 'category'
                 categories << text.slug!()
             else
                 tags << text.slug!()
             end
         }
+        body = post.at('content|encoded').inner_text.strip()
+        lines = []
+        body.gsub!("<br />", "\n")
+        body.gsub!(/alt="[^"]*"/, " ")
+        body.gsub!(" width=99%", " ")
+        body.gsub!(/ style="[^"]*"/," ")
+        body.gsub!(/border="[^"]*"/, " ")
+        body.gsub!(/width="[^"]*"/, " ")
+        body.gsub!(/height="[^"]*"/, " ")
+        body.gsub!(/class="[^"]*"/, " ")
+        body.gsub!(/hspace="\d+"[ ]\/>/,">\n")
+        body.gsub!(/hspace=\d+[ ]\/>/,">\n")
+        body.gsub!(/hspace=\d+[ ]>/,">\n")
+        body.gsub!(/data-block="true" data-editor="d9meq"/,"")
+
+        body.gsub!("</p><p>", "\n")
+        body.gsub!("</p>", "\n")
+        body.gsub!("<BR>", "\n")
+        body.gsub!("<br>", "\n")
+        body.gsub!("<br/>", "\n")
+        body.gsub!("<center>", "\n")
+        body.gsub!(/ data-offset-key="\w+"/,"")
+        body.gsub!("</center>", "\n")
+        body.gsub!("<p >", "\n")
+        body.gsub!(/<p align="\w+">/, "")
+        body.gsub!("<p>", "\n")
+        body.gsub!('  ', ' ')
+        body.gsub!('  ', ' ')
+        body.squeeze!(' ')
+        body.each_line do |line|
+            #do something with line
+            line = line.strip()
+            localimg = line.scan(/^<a href="http:\/\/jinto.pe.kr\/wp-content\/uploads.*><img.*><\/a>$/)
+            localimg2 = line.scan(/^<a href="http:\/\/jinto.pe.kr\/.*><img.*><\/a>$/)
+            limg3 = line.scan(/^<img src="http:\/\/jinto.pe.kr\/wp-content\/uploads.*>$/)
+            localimg4 = line.scan(/^<img src=\/photo.*>$/)
+            limg5 = line.scan(/^<img src="http:\/\/jinto.pe.kr\/photo.*>$/)
+            limg51= line.scan(/^<img src=http:\/\/jinto.pe.kr\/photo.*>$/)
+            limg6 = line.scan(/^<img src="http:\/\/jinto.pe.kr\/logs\/.*>$/)
+            limg7 = line.scan(/^<img src=\/logs.*>$/)
+            lhref1 = line.scan(/^<a src=\/logs.*>$/)
+
+            if localimg.length() > 0 || 
+               localimg2.length() > 0 || 
+               limg3.length() > 0 || 
+               localimg4.length() > 0 ||
+               limg5.length() > 0 ||
+               limg51.length() > 0 ||
+               limg6.length() > 0 ||
+               limg7.length() > 0
+                puts line
+            end
+            if localimg.length() > 0
+                src = /src="(.*?)"/.match(line)[1]
+                src.gsub!("http://jinto.pe.kr/wp-content/","")
+                src.gsub!("/","_")
+                line = "![ ](/assets/media/#{src})"
+            elsif localimg2.length() > 0
+                src = /src="(.*?)"/.match(line)[1]
+                src.gsub!("http://jinto.pe.kr/wp-content/","")
+                src.gsub!("/","_")
+                line = "![ ](/assets/media/#{src})"
+            elsif limg3.length() > 0
+                src = /src="(.*?)"/.match(line)[1]
+                src.gsub!("http://jinto.pe.kr/wp-content/","")
+                src.gsub!("/","_")
+                line = "![ ](/assets/media/#{src})"
+            elsif localimg4.length() > 0
+                src = /src=\/(.*?)[ >]/.match(line)[1]
+                src.gsub!("/","_")
+                line = "![ ](/assets/media/#{src})"
+            elsif limg5.length() > 0
+                src = /src="(.*?)"/.match(line)[1]
+                src.gsub!("http://jinto.pe.kr/","")
+                src.gsub!("/","_")
+                line = "![ ](/assets/media/#{src})"
+            elsif limg51.length() > 0
+                src = /src=(.*?)[ >]/.match(line)[1]
+                src.gsub!("http://jinto.pe.kr/","")
+                src.gsub!("/","_")
+                line = "![ ](/assets/media/#{src})"
+            elsif limg6.length() > 0
+                src = /src="(.*?)"/.match(line)[1]
+                src.gsub!("http://jinto.pe.kr/","")
+                src.gsub!("/","_")
+                line = "![ ](/assets/media/#{src})"
+            elsif limg7.length() > 0
+                src = /src=\/(.*?)[ >]/.match(line)[1]
+                src.gsub!("/","_")
+                line = "![ ](/assets/media/#{src})"
+            end
+
+            lines << line
+
+            if localimg.length() > 0 || 
+               localimg2.length() > 0 || 
+               limg3.length() > 0 || 
+               localimg4.length() > 0 ||
+               limg5.length() > 0 ||
+               limg51.length() > 0 ||
+               limg6.length() > 0 ||
+               limg7.length() > 0
+                puts line
+            end
+        end
+        #return if idx=="40"
+        body = lines.join("\n")
+        body.gsub!("<!-- wp:paragraph -->", "")
+        body.gsub!("<!-- /wp:paragraph -->", "")
+        body.gsub!("</blockquote>", "\n\n")
+        body.gsub!("<blockquote>", "\n\n> ")
+        body.gsub!(/<div[^>]*>|<\/div>/, "\n\n")
+        body.gsub!(/<span[^>]*>|<\/span>/, "")
+        body.gsub!(/<a href="http:\/\/jinto.pe.kr\/logs\/archives\/[0]*(\d+).html"/,
+                   "<a href=\"/\\1\\2\"")
+        body.gsub!("&nbsp;", " ")
+        body.gsub!("  ", " ")
+        body.gsub!("\n\n", "\n")
+        body.gsub!("\n\n", "\n")
+        body.gsub!("\n\n", "\n")
+        body.gsub!("\n\n", "\n")
+        body.gsub!("\n", "\n\n")
 
         puts "create file " + slug
         File.open("_posts/"+slug, 'w') { |f| 
@@ -60,9 +191,41 @@ xml.xpath("//channel/item").each do |post|
             write f, "title: #{title}"
             write f, "date: #{pubDate}"
             write f, "categories: #{categories.join(' ')}" if categories.length() > 0
-            write f, "tags: #{tags.join(' ')}"if tags.length() > 0
+            write f, "tags: #{tags}"if tags.length() > 0
+            write f, "redirect_from:"
+            write f, "  - /#{idx}"
             write f, "---"
-            write f, post.at('content|encoded').inner_text.strip()
+            write f, ""
+            write f, body
+
+            write f, "<div id=comments>"
+            comments  = post.xpath('wp:comment')
+            post.xpath('wp:comment').each { |cmt|
+                if cmt.at('wp|comment_approved').inner_text == "1" 
+                    write f, "<div class=comment>"
+
+                    author = cmt.at('wp|comment_author').inner_text
+                    cdate =  cmt.at('wp|comment_date').inner_text
+                    email = cmt.at('wp|comment_author_email').inner_text
+                    parent =  cmt.at('wp|comment_parent')
+                    write f, "<!--- cmt:" + cmt.at('wp|comment_id')+" --->"
+                    write f, "<!--- mail:" + email+ " --->"
+                    write f, "<!--- parent:"+parent+" --->"
+                    write f, author + " : "
+
+                    if cmt.at('wp|comment_type').inner_text == 'pingback'
+                        write f, "<!-- ping:"+cmt.at('wp|comment_id')+" --->"
+                        write f, "<a href='"+cmt.at('wp|comment_author_url').inner_text+"'>"
+                        write f, cmt.at('wp|comment_content').inner_text
+                        write f, "</a>"
+                    else
+                        write f, cmt.at('wp|comment_content').inner_text
+                    end
+                    write f, " <small>(" +cdate+ ")</small>"
+                    write f, "</div>"
+                end
+            }
+            write f, "</div>"
         }
     end
 end

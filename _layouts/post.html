@@ -2,16 +2,18 @@
 layout: default
 ---
 <h1>{{ page.title }}</h1>
-{{ page.date }}
-..
-{{ page.categories }}
-..
-{{ page.tags }}
+<small>{{ page.date }}</small>
+<a href="/category/{{page.categories}}">{{ page.categories }}</a>
 
 <hr/>
 
 {{ content }}
 
+<hr/>
+{% for tag in page.tags %}
+  {% capture tag_name %}{{ tag }}{% endcapture %}
+  <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+{% endfor %}
 <hr/>
 
 {% if page.previous.url %}

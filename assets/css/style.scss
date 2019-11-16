@@ -11,3 +11,15 @@ header {
   -o-background-size: cover;
   background-size: cover;
 }
+
+#comments {
+    margin-left: 40px;
+    font-size: 0.8em;
+    margin-top: 30px;
+}
+.comment {
+    border:solid 1px #192219;
+    padding: 6px;
+    margin: 3px;
+    font-size: 0.9em;
+}
