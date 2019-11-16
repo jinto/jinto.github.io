@@ -6,7 +6,7 @@ require 'date'
 require 'string_helpers'
 include StringHelpers
 
-xml = Nokogiri::XML(File.read("jinto.xml"))
+xml = Nokogiri::XML(File.read("export.xml"))
 
 def gen_slug(ymd, title)
     _slug = title.slug!
