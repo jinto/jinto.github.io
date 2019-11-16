@@ -1,0 +1,11 @@
+assets/uploads_jinto
+zbackup
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+_site
+.sass-cache
+Gemfile.lock
+*.gem
