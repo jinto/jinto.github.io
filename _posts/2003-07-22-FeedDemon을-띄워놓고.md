@@ -66,7 +66,7 @@ redirect_from:
 <!--- mail: --->
 <!--- parent:0 --->
 
-<small>박제권 : /to 구녕이님, 저.. 다시 인나서 또.. 그러고 있어요.. /to slowstep님, 음... Free Deamon만 시험해보구 있어요... 다운로드해서 그냥 깔았어요.. 요즘엔 별로 심각하게 테스트하는 거를 안좋아해서요.. ^^( 혹.. Mac user이신건....) http://hochan.net/archives/2003/05/000200.html 을 참조해주세요.  /to 이장님, 역삼역일것 같아요. 혹.. 아주빌딩?? <small>(2003-07-22 07:35:03)</small></small>
+> <small>박제권 : /to 구녕이님, 저.. 다시 인나서 또.. 그러고 있어요.. /to slowstep님, 음... Free Deamon만 시험해보구 있어요... 다운로드해서 그냥 깔았어요.. 요즘엔 별로 심각하게 테스트하는 거를 안좋아해서요.. ^^( 혹.. Mac user이신건....) http://hochan.net/archives/2003/05/000200.html 을 참조해주세요.  /to 이장님, 역삼역일것 같아요. 혹.. 아주빌딩?? <small>(2003-07-22 07:35:03)</small></small>
 
 
 <!--- cmt:48 --->
@@ -80,5 +80,5 @@ redirect_from:
 <!--- mail: --->
 <!--- parent:0 --->
 
-<small>박제권 : 이장님, 히... ^^ <small>(2003-07-22 12:18:26)</small></small>
+> <small>박제권 : 이장님, 히... ^^ <small>(2003-07-22 12:18:26)</small></small>
 
