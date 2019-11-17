@@ -17,15 +17,15 @@ redirect_from:
 
 추가: 그사람들이 써놓은 가이드를 자세히 읽다가 이런 것을...
 
-<CODE>
-
-&lt;input type="text" name="username" value="&lt;%= loginBean.getUsername() &gt;"/&gt;
-
-</CODE>
+```jsp
+<input type="text" name="username" value="<%= loginBean.getUsername() %>"/>
+```
 
 이런것이 디자이너에게 어려움을 느끼게 하므로, 커스텀 태그 라이브러리를 써서
 
-&lt;html:text property="username"/&gt;
+```jstl
+<html:text property="username"/>
+```
 
 로 <b>간단하게</B> 만들 수 있단다. 이것으로 모델-뷰-컨트롤러의 "뷰"를 간단하게 만든다는 것인데... 앞서가는 기술을 도입하려다가, "이게 왠사투리야.." 라고 하는 소리를 들었던 기억이..
 
@@ -33,7 +33,6 @@ redirect_from:
 
 아.. 간단한 건데 우째 ...
 
-조만간 HTML코딩에서 디자이너와 엔지니어를 진짜로 분리해줄수있는 진짜로 간단한 "HTML 페이지+서버사이드 스크립팅" 엔진을 만들고야 말테다... 쩝...
 
 * * *
 
@@ -52,12 +51,4 @@ redirect_from:
 <!--- mail: --->
 <!--- parent:0 --->
 
-<small>jinto : 그죠? 저두, 옛날에 그랬듯이 웹용 스크립트 하나 만드는 중입니다. 머, 언제 완료할지는 아무도 모르죠. ^^ <small>(2003-10-10 06:12:16)</small></small>
-
-
-<!--- cmt:177 --->
-<!--- mail: --->
-<!--- parent:0 --->
-
-<small>티티새의 날개짓 / 미래로 이어지는 다리 : <!-- ping:177 ---> (Trackback from <a href='http://naushika.egloos.com/91003'>http://naushika.egloos.com/91003</a>) zodiac47님의 글 중 트랙백~~~미니홈피와 블로그   싸이월드 미니홈피에 열중하던 때가 있었습니다.. 우리오라버니 : "왜 그걸 그렇게 열씨미 해?"  나 : " 글쎄..사람들이 와서 내 사진도보고 얘? <small>(2003-11-01 01:26:06)</small></small>
-
+> <small>jinto : 그죠? 저두, 옛날에 그랬듯이 웹용 스크립트 하나 만드는 중입니다. 머, 언제 완료할지는 아무도 모르죠. ^^ <small>(2003-10-10 06:12:16)</small></small>
