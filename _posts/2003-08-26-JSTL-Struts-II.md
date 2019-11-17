@@ -83,19 +83,19 @@ $flogger.getPromo( $mud )
 <!--- mail: --->
 <!--- parent:0 --->
 
-<small class=comment>만박 : 갈수록 '전산기술자 포스팅'이 많아지네요~ 화이팅임다~ <small>(2003-08-26 11:15:42)</small></small>
+<small>만박 : 갈수록 '전산기술자 포스팅'이 많아지네요~ 화이팅임다~ <small>(2003-08-26 11:15:42)</small></small>
 
 
 <!--- cmt:179 --->
 <!--- mail: --->
 <!--- parent:0 --->
 
-<small class=comment>돌핀호텔 : 아트... 카테고리까지 보시는 군요.. ^^ 아무래도, 먹고 살려다 보니...   히... <small>(2003-08-26 13:26:00)</small></small>
+<small>돌핀호텔 : 아트... 카테고리까지 보시는 군요.. ^^ 아무래도, 먹고 살려다 보니...   히... <small>(2003-08-26 13:26:00)</small></small>
 
 
 <!--- cmt:180 --->
 <!--- mail: --->
 <!--- parent:0 --->
 
-<small class=comment>Bomber0@NeT : <!-- ping:180 ---> (Trackback from <a href='http://bomber0.byus.net/archives/000049.html'>http://bomber0.byus.net/archives/000049.html</a>) 소가 먹는다 싼다 똥수레와 호박 다음에 휴가 나오면 먹을 호박에 거름을 주었다 당신이 마시는 우유는 소똥을 거름삼아 자라난 그 풀을 먹은 소에서 난다.... <small>(2003-10-30 05:28:06)</small></small>
+<small>Bomber0@NeT : <!-- ping:180 ---> (Trackback from <a href='http://bomber0.byus.net/archives/000049.html'>http://bomber0.byus.net/archives/000049.html</a>) 소가 먹는다 싼다 똥수레와 호박 다음에 휴가 나오면 먹을 호박에 거름을 주었다 당신이 마시는 우유는 소똥을 거름삼아 자라난 그 풀을 먹은 소에서 난다.... <small>(2003-10-30 05:28:06)</small></small>
 

@@ -25,5 +25,5 @@ redirect_from:
 <!--- mail: --->
 <!--- parent:0 --->
 
-<small class=comment>빨강머리앤 : 핫핫,, 그래도 성취감은 엄청시럽다우 <small>(2003-12-22 07:23:35)</small></small>
+<small>빨강머리앤 : 핫핫,, 그래도 성취감은 엄청시럽다우 <small>(2003-12-22 07:23:35)</small></small>
 

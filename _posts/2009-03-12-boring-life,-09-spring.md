@@ -29,5 +29,5 @@ redirect_from:
 <!--- mail: --->
 <!--- parent:0 --->
 
-<small class=comment>warry : 날이 많이 더워(?) 졌어요... 애고 졸린거.. 춘곤증~ Zzzzz <small>(2009-03-19 02:34:22)</small></small>
+<small>warry : 날이 많이 더워(?) 졌어요... 애고 졸린거.. 춘곤증~ Zzzzz <small>(2009-03-19 02:34:22)</small></small>
 

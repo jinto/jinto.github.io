@@ -239,7 +239,7 @@ xml.xpath("//channel/item").each do |post|
                         write f, "<!--- mail:" + email+ " --->"
                         write f, "<!--- parent:"+parent+" --->"
 
-                        write f, "\n<small class=comment>"+author + " : ", ""
+                        write f, "\n<small>"+author + " : ", ""
 
                         if cmt.at('wp|comment_type').inner_text == 'pingback' ||
                            cmt.at('wp|comment_type').inner_text == 'trackback'
