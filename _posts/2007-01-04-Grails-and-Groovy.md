@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grails and Groovy
-date: 2007-01-04T08:23:47+00:00
+date: 2007-01-04T17:23:47+09:00
 categories: 전산기술자
 tags: ["그루비(groovy)"]
 redirect_from:

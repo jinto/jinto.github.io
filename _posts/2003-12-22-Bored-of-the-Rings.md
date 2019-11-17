@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bored of the Rings
-date: 2003-12-22T07:02:06+00:00
+date: 2003-12-22T16:02:06+09:00
 categories: 북컬렉터의-최근
 redirect_from:
   - /271

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Le matin sur la riviere
-date: 2003-12-21T08:10:41+00:00
+date: 2003-12-21T17:10:41+09:00
 categories: 귀를-기울이면
 redirect_from:
   - /269

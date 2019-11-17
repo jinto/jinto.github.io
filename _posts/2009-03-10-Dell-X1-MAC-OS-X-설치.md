@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dell X1 MAC OS X 설치
-date: 2009-03-10T06:59:34+00:00
+date: 2009-03-10T15:59:34+09:00
 categories: 전산기술자
 redirect_from:
   - /907

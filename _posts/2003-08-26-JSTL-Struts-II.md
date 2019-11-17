@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JSTL Struts II
-date: 2003-08-26T10:01:01+00:00
+date: 2003-08-26T19:01:01+09:00
 categories: 전산기술자
 redirect_from:
   - /81

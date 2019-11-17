@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Game Server Framework
-date: 2004-03-27T04:47:25+00:00
+date: 2004-03-27T13:47:25+09:00
 categories: 전산기술자
 redirect_from:
   - /360

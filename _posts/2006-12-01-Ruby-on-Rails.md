@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ruby on Rails
-date: 2006-12-01T06:50:24+00:00
+date: 2006-12-01T15:50:24+09:00
 categories: 전산기술자
 tags: ["그루비(groovy)", "루비(ruby)"]
 redirect_from:

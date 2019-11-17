@@ -53,7 +53,7 @@ xml.xpath("//channel/item").each do |post|
         #next if idx.to_i >= 1000
 
         title = post.at('title').inner_text.strip()
-        strYMD = pubDate.strftime("%Y-%m-%d")
+        strYMD = pubDate.new_offset('+09:00').strftime("%Y-%m-%d")
         slug = gen_slug(strYMD, title)
         categories = []
         tags = []
@@ -201,7 +201,7 @@ xml.xpath("//channel/item").each do |post|
             write f, "---"
             write f, "layout: post"
             write f, "title: #{title}"
-            write f, "date: #{pubDate}"
+            write f, "date: #{pubDate.new_offset('+09:00')}"
             write f, "categories: #{categories.join(' ')}" if categories.length() > 0
             write f, "tags: #{tags}"if tags.length() > 0
             write f, "redirect_from:"

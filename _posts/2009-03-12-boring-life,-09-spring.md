@@ -1,7 +1,7 @@
 ---
 layout: post
 title: boring life, 09 spring
-date: 2009-03-12T12:38:56+00:00
+date: 2009-03-12T21:38:56+09:00
 categories: 일상의-느낌
 redirect_from:
   - /910

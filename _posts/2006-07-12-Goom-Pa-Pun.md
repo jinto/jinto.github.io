@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Goom Pa Pun
-date: 2006-07-12T05:43:02+00:00
+date: 2006-07-12T14:43:02+09:00
 categories: 귀를-기울이면
 redirect_from:
   - /665
