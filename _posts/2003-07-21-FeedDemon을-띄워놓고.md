@@ -34,58 +34,51 @@ redirect_from:
 --- 2003.12.8 ---
 
 스펠링 수정. Free Deamon 을 FeedDemon으로
-<div id=comments>
-<div class=comment>
+
+* * *
+
+### 댓글
+
+
+
 <!--- cmt:44 --->
 <!--- mail: --->
 <!--- parent:0 --->
-구녕이 : 
-저도 웹로그가 올라오길 기다리고 있습니다. ㅠㅠ
- <small>(2003-07-21 17:17:01)</small>
-</div>
-<div class=comment>
+
+<small class=comment>구녕이 : 저도 웹로그가 올라오길 기다리고 있습니다. ㅠㅠ <small>(2003-07-21 17:17:01)</small></small>
+
+
 <!--- cmt:45 --->
 <!--- mail: --->
 <!--- parent:0 --->
-slowstep : 
-Free Deamon에 대해 알고 싶습니다.
-몇가지 RSS reader를 사용해보려 했는데 잘 안되는군요. -_-;
- <small>(2003-07-21 18:41:18)</small>
-</div>
-<div class=comment>
+
+<small class=comment>slowstep : Free Deamon에 대해 알고 싶습니다. 몇가지 RSS reader를 사용해보려 했는데 잘 안되는군요. -_-; <small>(2003-07-21 18:41:18)</small></small>
+
+
 <!--- cmt:46 --->
 <!--- mail: --->
 <!--- parent:0 --->
-이장 : 
-학동역이면 저희 회사랑 가까운 곳인데...^^
- <small>(2003-07-22 00:47:24)</small>
-</div>
-<div class=comment>
+
+<small class=comment>이장 : 학동역이면 저희 회사랑 가까운 곳인데...^^ <small>(2003-07-22 00:47:24)</small></small>
+
+
 <!--- cmt:47 --->
 <!--- mail: --->
 <!--- parent:0 --->
-박제권 : 
-/to 구녕이님, 저.. 다시 인나서 또.. 그러고 있어요..
-/to slowstep님, 음... Free Deamon만 시험해보구 있어요... 다운로드해서 그냥 깔았어요.. 요즘엔 별로 심각하게 테스트하는 거를 안좋아해서요.. ^^( 혹.. Mac user이신건....)
-http://hochan.net/archives/2003/05/000200.html 을 참조해주세요.
 
-/to 이장님, 역삼역일것 같아요. 혹.. 아주빌딩??
- <small>(2003-07-22 07:35:03)</small>
-</div>
-<div class=comment>
+<small class=comment>박제권 : /to 구녕이님, 저.. 다시 인나서 또.. 그러고 있어요.. /to slowstep님, 음... Free Deamon만 시험해보구 있어요... 다운로드해서 그냥 깔았어요.. 요즘엔 별로 심각하게 테스트하는 거를 안좋아해서요.. ^^( 혹.. Mac user이신건....) http://hochan.net/archives/2003/05/000200.html 을 참조해주세요.  /to 이장님, 역삼역일것 같아요. 혹.. 아주빌딩?? <small>(2003-07-22 07:35:03)</small></small>
+
+
 <!--- cmt:48 --->
 <!--- mail: --->
 <!--- parent:0 --->
-이장 : 
-이름만 말하면 알 수 있는 그런 빌딩은 아니랍니다.^^
- <small>(2003-07-22 10:07:00)</small>
-</div>
-<div class=comment>
+
+<small class=comment>이장 : 이름만 말하면 알 수 있는 그런 빌딩은 아니랍니다.^^ <small>(2003-07-22 10:07:00)</small></small>
+
+
 <!--- cmt:49 --->
 <!--- mail: --->
 <!--- parent:0 --->
-박제권 : 
-이장님, 히... ^^
- <small>(2003-07-22 12:18:26)</small>
-</div>
-</div>
+
+<small class=comment>박제권 : 이장님, 히... ^^ <small>(2003-07-22 12:18:26)</small></small>
+

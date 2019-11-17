@@ -18,13 +18,16 @@ redirect_from:
 <img src="http://farm4.static.flickr.com/3644/3349168678_feb5290c2b.jpg?v=0">
 
 <img src="http://farm4.static.flickr.com/3617/3349120012_657f8e026d.jpg?v=0">
-<div id=comments>
-<div class=comment>
+
+* * *
+
+### 댓글
+
+
+
 <!--- cmt:1188 --->
 <!--- mail: --->
 <!--- parent:0 --->
-warry : 
-날이 많이 더워(?) 졌어요... 애고 졸린거.. 춘곤증~ Zzzzz
- <small>(2009-03-19 02:34:22)</small>
-</div>
-</div>
+
+<small class=comment>warry : 날이 많이 더워(?) 졌어요... 애고 졸린거.. 춘곤증~ Zzzzz <small>(2009-03-19 02:34:22)</small></small>
+

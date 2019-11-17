@@ -18,5 +18,3 @@ Game Server Framework
 일단, 게임서버개발 관련한 책을 두권 골라왔다. 오늘 밤에 천천히 읽어주면, 준비는 끝날 것 같아.
 
 <a href=/wiki/GSF>위키쪽에 정리</a>
-<div id=comments>
-</div>

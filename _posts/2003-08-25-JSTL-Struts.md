@@ -34,36 +34,30 @@ redirect_from:
 아.. 간단한 건데 우째 ...
 
 조만간 HTML코딩에서 디자이너와 엔지니어를 진짜로 분리해줄수있는 진짜로 간단한 "HTML 페이지+서버사이드 스크립팅" 엔진을 만들고야 말테다... 쩝...
-<div id=comments>
-<div class=comment>
+
+* * *
+
+### 댓글
+
+
+
 <!--- cmt:175 --->
 <!--- mail: --->
 <!--- parent:0 --->
-단군 : 
-제가 보기엔 아직까지 ColdFusion을 따라오는 것이 없을 듯 합니다. 아님 Informix(이젠 IBM...) Web DataBlade가...
 
-저는 웹데이타블레이드가 맘에 들어서 그런 엔진을 만들어보고 싶군요.
- <small>(2003-10-10 05:52:36)</small>
-</div>
-<div class=comment>
+<small class=comment>단군 : 제가 보기엔 아직까지 ColdFusion을 따라오는 것이 없을 듯 합니다. 아님 Informix(이젠 IBM...) Web DataBlade가...  저는 웹데이타블레이드가 맘에 들어서 그런 엔진을 만들어보고 싶군요. <small>(2003-10-10 05:52:36)</small></small>
+
+
 <!--- cmt:176 --->
 <!--- mail: --->
 <!--- parent:0 --->
-jinto : 
-그죠? 저두, 옛날에 그랬듯이 웹용 스크립트 하나 만드는 중입니다. 머, 언제 완료할지는 아무도 모르죠. ^^
- <small>(2003-10-10 06:12:16)</small>
-</div>
-<div class=comment>
+
+<small class=comment>jinto : 그죠? 저두, 옛날에 그랬듯이 웹용 스크립트 하나 만드는 중입니다. 머, 언제 완료할지는 아무도 모르죠. ^^ <small>(2003-10-10 06:12:16)</small></small>
+
+
 <!--- cmt:177 --->
 <!--- mail: --->
 <!--- parent:0 --->
-티티새의 날개짓 / 미래로 이어지는 다리 : 
-zodiac47님의 글 중 트랙백~~~미니홈피와 블로그
 
+<small class=comment>티티새의 날개짓 / 미래로 이어지는 다리 : <!-- ping:177 ---> (Trackback from <a href='http://naushika.egloos.com/91003'>http://naushika.egloos.com/91003</a>) zodiac47님의 글 중 트랙백~~~미니홈피와 블로그   싸이월드 미니홈피에 열중하던 때가 있었습니다.. 우리오라버니 : "왜 그걸 그렇게 열씨미 해?"  나 : " 글쎄..사람들이 와서 내 사진도보고 얘? <small>(2003-11-01 01:26:06)</small></small>
 
-싸이월드 미니홈피에 열중하던 때가 있었습니다..
-우리오라버니 : "왜 그걸 그렇게 열씨미 해?" 
-나 : " 글쎄..사람들이 와서 내 사진도보고 얘?
- <small>(2003-11-01 01:26:06)</small>
-</div>
-</div>

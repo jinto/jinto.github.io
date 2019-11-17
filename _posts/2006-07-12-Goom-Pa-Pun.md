@@ -106,5 +106,3 @@ Sad until the day I die.
 <a href="http://www.ethaimusic.com/lyrics/049.htm">http://www.ethaimusic.com/lyrics/049.htm</a>
 
 노래제목 "Goom Pa Pun" 은 "2월" 인가...
-<div id=comments>
-</div>

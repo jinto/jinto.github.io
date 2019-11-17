@@ -15,10 +15,10 @@ def gen_slug(ymd, title)
     return ymd + _slug + ".md"
 end
 
-def write(f, str)
+def write(f, str, ends="\n")
 
     #puts str
-    f.write str + "\n"
+    f.write str + ends
 end
 
 xml.xpath("//wp:cat_name").each do |category|
@@ -48,6 +48,10 @@ xml.xpath("//channel/item").each do |post|
     if type == 'post' and status == 'publish'
         pubDate = DateTime.parse(post.at('pubDate'))
         idx = post.at('wp|post_id').inner_text
+
+        #next if idx.to_i <= 200
+        #next if idx.to_i >= 1000
+
         title = post.at('title').inner_text.strip()
         strYMD = pubDate.strftime("%Y-%m-%d")
         slug = gen_slug(strYMD, title)
@@ -67,6 +71,7 @@ xml.xpath("//channel/item").each do |post|
         body.gsub!(/alt="[^"]*"/, " ")
         body.gsub!(" width=99%", " ")
         body.gsub!(/ style="[^"]*"/," ")
+        body.gsub!(/target=pic/, " ")
         body.gsub!(/border="[^"]*"/, " ")
         body.gsub!(/width="[^"]*"/, " ")
         body.gsub!(/height="[^"]*"/, " ")
@@ -75,6 +80,10 @@ xml.xpath("//channel/item").each do |post|
         body.gsub!(/hspace=\d+[ ]\/>/,">\n")
         body.gsub!(/hspace=\d+[ ]>/,">\n")
         body.gsub!(/data-block="true" data-editor="d9meq"/,"")
+        body.gsub!(/<!-- wp:image {"\w+":\d+} -->/,'')
+        body.gsub!(/<!-- \/wp:image -->/,'')
+        body.gsub!(/<figure\s\s+>/,'')
+        body.gsub!(/<\/figure[ ]>/,'')
 
         body.gsub!("</p><p>", "\n")
         body.gsub!("</p>", "\n")
@@ -100,6 +109,7 @@ xml.xpath("//channel/item").each do |post|
             limg5 = line.scan(/^<img src="http:\/\/jinto.pe.kr\/photo.*>$/)
             limg51= line.scan(/^<img src=http:\/\/jinto.pe.kr\/photo.*>$/)
             limg6 = line.scan(/^<img src="http:\/\/jinto.pe.kr\/logs\/.*>$/)
+            limg61 = line.scan(/^<a href="\/logs\/.*<img.*>.*>$/)
             limg7 = line.scan(/^<img src=\/logs.*>$/)
             lhref1 = line.scan(/^<a src=\/logs.*>$/)
 
@@ -110,6 +120,7 @@ xml.xpath("//channel/item").each do |post|
                limg5.length() > 0 ||
                limg51.length() > 0 ||
                limg6.length() > 0 ||
+               limg61.length() > 0 ||
                limg7.length() > 0
                 puts line
             end
@@ -142,7 +153,7 @@ xml.xpath("//channel/item").each do |post|
                 src.gsub!("http://jinto.pe.kr/","")
                 src.gsub!("/","_")
                 line = "![ ](/assets/media/#{src})"
-            elsif limg6.length() > 0
+            elsif (limg6.length() > 0 || limg61.length() > 0)
                 src = /src="(.*?)"/.match(line)[1]
                 src.gsub!("http://jinto.pe.kr/","")
                 src.gsub!("/","_")
@@ -162,6 +173,7 @@ xml.xpath("//channel/item").each do |post|
                limg5.length() > 0 ||
                limg51.length() > 0 ||
                limg6.length() > 0 ||
+               limg61.length() > 0 ||
                limg7.length() > 0
                 puts line
             end
@@ -198,34 +210,49 @@ xml.xpath("//channel/item").each do |post|
             write f, ""
             write f, body
 
-            write f, "<div id=comments>"
+#$* * *
+### 댓글 ###
+#<!--- cmt:6 --->
+#<!--- mail:susemi99@gmail.com --->
+#<!--- parent:0 --->
+#<small>쎄미 : 고맙습니다~ <small>(2015-02-05 01:51:31)</small></small>
+#
+#<!--- cmt:7 --->
+#<!--- mail: --->
+#<!--- parent:0 --->
+#<!-- ping:7 --->
+#<small>쎄미 | [rails] PostgreSQL의 한글 필드 정렬 : <a href='http://susemi99.kr/2558'> [&#8230;] http://tech.jinto.pe.kr/165 에서 해답을 얻었다. [&#8230;] </a> <small>(2015-02-05 01:58:58)</small></small>
             comments  = post.xpath('wp:comment')
-            post.xpath('wp:comment').each { |cmt|
-                if cmt.at('wp|comment_approved').inner_text == "1" 
-                    write f, "<div class=comment>"
+            if comments.size() > 0
+                write f, "\n* * *\n"
+                write f, "### 댓글\n\n"
+                post.xpath('wp:comment').each { |cmt|
+                    if cmt.at('wp|comment_approved').inner_text == "1" 
 
-                    author = cmt.at('wp|comment_author').inner_text
-                    cdate =  cmt.at('wp|comment_date').inner_text
-                    email = cmt.at('wp|comment_author_email').inner_text
-                    parent =  cmt.at('wp|comment_parent')
-                    write f, "<!--- cmt:" + cmt.at('wp|comment_id')+" --->"
-                    write f, "<!--- mail:" + email+ " --->"
-                    write f, "<!--- parent:"+parent+" --->"
-                    write f, author + " : "
+                        author = cmt.at('wp|comment_author').inner_text
+                        cdate =  cmt.at('wp|comment_date').inner_text
+                        email = cmt.at('wp|comment_author_email').inner_text
+                        parent =  cmt.at('wp|comment_parent')
+                        content = cmt.at('wp|comment_content').inner_text
 
-                    if cmt.at('wp|comment_type').inner_text == 'pingback'
-                        write f, "<!-- ping:"+cmt.at('wp|comment_id')+" --->"
-                        write f, "<a href='"+cmt.at('wp|comment_author_url').inner_text+"'>"
-                        write f, cmt.at('wp|comment_content').inner_text
-                        write f, "</a>"
-                    else
-                        write f, cmt.at('wp|comment_content').inner_text
+                        write f, "\n<!--- cmt:" + cmt.at('wp|comment_id')+" --->"
+                        write f, "<!--- mail:" + email+ " --->"
+                        write f, "<!--- parent:"+parent+" --->"
+
+                        write f, "\n<small class=comment>"+author + " : ", ""
+
+                        if cmt.at('wp|comment_type').inner_text == 'pingback' ||
+                           cmt.at('wp|comment_type').inner_text == 'trackback'
+                            write f, "<!-- ping:"+cmt.at('wp|comment_id')+" --->", ""
+                            url = cmt.at('wp|comment_author_url').inner_text
+                            write f, " (Trackback from <a href='#{url}'>#{url}</a>) ", ""
+                        end
+
+                        write f, content.gsub("\n"," "), ""
+                        write f, " <small>(" +cdate+ ")</small></small>\n"
                     end
-                    write f, " <small>(" +cdate+ ")</small>"
-                    write f, "</div>"
-                end
-            }
-            write f, "</div>"
+                }
+            end
         }
     end
 end

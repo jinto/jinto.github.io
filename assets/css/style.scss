@@ -3,23 +3,64 @@
 
 @import 'jekyll-theme-architect';
 
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif+KR:500,700&subset=korean);
+
+body{
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.2em;
+  color: #222;
+}
 
 header {
-  background: #2e7bcf url(/assets/images/jinto_logo.jpg) no-repeat top center fixed;
+  background-image: url(/assets/images/jinto_logo.jpg);
+  /*background: #2e7bcf url(/assets/images/jinto_logo.jpg) no-repeat top center fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-#comments {
-    margin-left: 40px;
-    font-size: 0.8em;
-    margin-top: 30px;
+.header-image {
+    border-radius: 50%;
+    margin-right: 3em;
 }
-.comment {
-    border:solid 1px #192219;
-    padding: 6px;
-    margin: 3px;
-    font-size: 0.9em;
+
+header h1 {
+    font-size: 2.5em;
+    padding-top: 0.9em;
+}
+#main-content h1 {
+    font-family: Noto Serif KR,sans-serif;
+    margin: 0;
+    font-size: 2.5em;
+    line-height: 3.2rem;
+}
+#main-content p {
+    color: #444;
+    text-align: start;
+    font-size: 1.125rem;
+    word-break: break-word;
+    word-wrap: break-word;
+    font-family: Noto Serif KR,sans-serif;
+    line-height: 1.75;
+    font-weight: 400;
+    color: #495057;
+    margin: 15px 0;
+    margin-top: 1.5em;
+}
+
+li {
+    font-family: Noto Serif KR,sans-serif;
+    font-weight: 40;
+    color: #495057;
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+pre.highlight {
+    background-color: #efefef;
+}
+pre code {
+    background-color: #efefef;
 }

@@ -64,51 +64,44 @@ and that you'll always let it be me.
 20030802토. 와인을 마시고, 너무 감정적인 번역이 되어버렸다. 하지만, 츠지 아야노의 목소리는 이런 느낌이 아닐까. 돌핀호텔.
 
 그림과 mp3는 <A href="http://lhjrules.cafe24.com/MT/archives/000254.html">http://lhjrules.cafe24.com/MT/archives/000254.html</A>에서 퍼왔다.</DIV>
-<div id=comments>
-<div class=comment>
+
+* * *
+
+### 댓글
+
+
+
 <!--- cmt:92 --->
 <!--- mail: --->
 <!--- parent:0 --->
-zerodie : 
-음악 잘 듣고 갑니다.
-지금 소나기 오는데...
-사무실이라 볼륨을 작게했더니 빗소리랑 섞여서 들립니다.
- <small>(2003-08-04 06:37:47)</small>
-</div>
-<div class=comment>
+
+<small class=comment>zerodie : 음악 잘 듣고 갑니다. 지금 소나기 오는데... 사무실이라 볼륨을 작게했더니 빗소리랑 섞여서 들립니다. <small>(2003-08-04 06:37:47)</small></small>
+
+
 <!--- cmt:93 --->
 <!--- mail: --->
 <!--- parent:0 --->
-박제권 : 
-비올때, 이런거 들으면... 뿅가요...^^
- <small>(2003-08-05 02:12:31)</small>
-</div>
-<div class=comment>
+
+<small class=comment>박제권 : 비올때, 이런거 들으면... 뿅가요...^^ <small>(2003-08-05 02:12:31)</small></small>
+
+
 <!--- cmt:94 --->
 <!--- mail: --->
 <!--- parent:0 --->
-돌핀호텔 : 
-내가 올리고, 다시 듣고, 들으면서 좋아한다.. 키득 키득.
- <small>(2003-08-17 04:36:37)</small>
-</div>
-<div class=comment>
+
+<small class=comment>돌핀호텔 : 내가 올리고, 다시 듣고, 들으면서 좋아한다.. 키득 키득. <small>(2003-08-17 04:36:37)</small></small>
+
+
 <!--- cmt:95 --->
 <!--- mail: --->
 <!--- parent:0 --->
-홍승기 : 
-아 츠지아야노 너무좋아해여;; 
-^^
-가사보니까 더좋아지네여 ㅋ
-좋은 하루들되세여
- <small>(2003-10-05 17:01:20)</small>
-</div>
-<div class=comment>
+
+<small class=comment>홍승기 : 아 츠지아야노 너무좋아해여;;  ^^ 가사보니까 더좋아지네여 ㅋ 좋은 하루들되세여 <small>(2003-10-05 17:01:20)</small></small>
+
+
 <!--- cmt:96 --->
 <!--- mail: --->
 <!--- parent:0 --->
-jinto : 
-ㅋㅋ, 네, 저 이거 아주아주 좋아합니다.
-Music 디렉토리의 제일 꼭대기에 있답니다.^^
- <small>(2003-10-06 15:48:34)</small>
-</div>
-</div>
+
+<small class=comment>jinto : ㅋㅋ, 네, 저 이거 아주아주 좋아합니다. Music 디렉토리의 제일 꼭대기에 있답니다.^^ <small>(2003-10-06 15:48:34)</small></small>
+
