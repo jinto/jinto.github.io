@@ -22,9 +22,9 @@ title: 돌핀호텔의 기억
 email: japark@gmail.com
 description: 박제권의 블로그 (since 2003.7.3)
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://jinto.pe.kr" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jinto
+github_username:  jinto
 
 # Build settings
 theme: minima
